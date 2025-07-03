@@ -30,6 +30,18 @@
       color: #222;
     }
 
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: url('64.jpg') no-repeat center center/cover;
+      z-index: -2;
+      opacity: 0.4;
+    }
+
     #navbar {
       display: flex;
       justify-content: space-between;
