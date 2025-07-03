@@ -34,22 +34,23 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      background: linear-gradient(90deg, var(--dark), var(--primary));
+      background: rgba(0, 0, 0, 0.2);
       padding: 15px 30px;
       position: sticky;
       top: 0;
       z-index: 1000;
       box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      backdrop-filter: blur(10px);
     }
 
     #navbar #logo img {
-      height: 80px;
+      height: 60px;
     }
 
     #navbar ul {
       list-style: none;
       display: flex;
-      gap: 30px;
+      gap: 20px;
     }
 
     #navbar ul li a {
@@ -66,7 +67,7 @@
 
     #home {
       background: url('64.jpg') no-repeat center center/cover;
-      height: 70vh;
+      height: 60vh;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -86,9 +87,9 @@
     #home h1 {
       position: relative;
       color: #fff;
-      font-size: 3rem;
+      font-size: 2.8rem;
       z-index: 1;
-      padding: 20px 40px;
+      padding: 16px 30px;
       border-radius: 12px;
       background: rgba(0, 121, 107, 0.7);
       text-align: center;
@@ -102,7 +103,7 @@
 
     .h-primary {
       text-align: center;
-      font-size: 2.8rem;
+      font-size: 2.6rem;
       color: var(--primary);
       margin-bottom: 40px;
       font-family: 'Bree Serif', serif;
@@ -129,7 +130,7 @@
 
     .box img {
       width: 100%;
-      height: 220px;
+      height: 180px;
       object-fit: cover;
     }
 
@@ -197,17 +198,41 @@
     }
 
     @media (max-width: 768px) {
+      #navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px 20px;
+      }
+
       #navbar ul {
         flex-direction: column;
         gap: 12px;
-        background: var(--dark);
+        width: 100%;
+        background: rgba(0, 0, 0, 0.3);
         padding: 10px;
         border-radius: 8px;
       }
 
+      #navbar ul li {
+        width: 100%;
+      }
+
+      #navbar ul li a {
+        display: block;
+        width: 100%;
+      }
+
+      #home {
+        height: 50vh;
+      }
+
       #home h1 {
-        font-size: 2rem;
-        padding: 15px;
+        font-size: 1.8rem;
+        padding: 12px;
+      }
+
+      .box img {
+        height: 160px;
       }
     }
   </style>
@@ -234,7 +259,6 @@
   <section class="services-container">
     <h1 class="h-primary">Recently Launched Townships</h1>
     <div id="services">
-
       <div class="box">
         <img src="./90.jpg" alt="Elite World">
         <h2>ELITE WORLD</h2>
@@ -255,7 +279,6 @@
         <p>Located in Village Bhapura near Mahindra SEZ.</p>
         <a href="./VRB WORLD CITY.HTML" target="_blank" class="btn">Visit For More</a>
       </div>
-
     </div>
   </section>
 
