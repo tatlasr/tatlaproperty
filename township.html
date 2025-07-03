@@ -1,126 +1,225 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Township</title>
-    <link rel="stylesheet" href="css2.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>All Townships</title>
+  <style>
+    /* General Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f0f2f5;
+      color: #333;
+    }
+
+    .services-container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 40px 20px;
+    }
+
+    .h-primary {
+      text-align: center;
+      font-size: 3rem;
+      margin-bottom: 40px;
+      color: #004d40;
+    }
+
+    .cards-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 24px;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 16px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+      overflow: hidden;
+      transition: all 0.3s ease;
+      width: 320px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 6px 24px rgba(0,0,0,0.12);
+    }
+
+    .card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .card-content {
+      padding: 20px;
+      flex: 1;
+    }
+
+    .card h2 {
+      font-size: 1.4rem;
+      color: #00796b;
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      font-size: 0.95rem;
+      color: #555;
+      margin-bottom: 20px;
+    }
+
+    .btn {
+      background-color: #00796b;
+      color: #fff;
+      padding: 10px 18px;
+      border: none;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+      display: inline-block;
+      text-align: center;
+    }
+
+    .btn:hover {
+      background-color: #004d40;
+    }
+
+    @media (max-width: 768px) {
+      .h-primary {
+        font-size: 2rem;
+      }
+
+      .card {
+        width: 90%;
+      }
+    }
+  </style>
 </head>
 
 <body>
-    <section class="services-container">
-        <h1 class="h-primary center">ALL Township</h1>
-        <div id="services">
-            <div class="box">
-                <img src="./62.jpg" alt="">
-                <a href="./PLATINUM.HTML.html" target="_blank">
-                <h2 class="h-secondary center"> Platinum Greens</h2>
-                <p class="center">well developed township at near amjer highway road on NH8</p>
-                <button class="btn">Visit For More</button>
-            </div>
+  <section class="services-container">
+    <h1 class="h-primary">ALL Townships</h1>
 
-            <div class="box">
-                <img src="./88.jpg" alt="">
-                <a href="./VRB WORLD CITY.HTML" target="_blank">
-                <h2 class="h-secondary center"> VRB World City</h2>
-                <p class="center">well developed township at VILLAGE BHAPURA NEAR BY MAHINDRA SEZ</p>
-                <button class="btn">Visit For More</button>
-            </div>
-
-            <div class="box">
-                <img src="./55.jpg" alt="">
-                <a href="./BHUMIJA EMPIRE.HTML" target="_blank">
-                <h2 class="h-secondary center">Bhumija Empire</h2>
-                <p class="center">well developed township at KHORASHAYMDAS NEAR BY NEW CHOMP STADIUM</p>
-                <button class="btn">Visit For More</button>
-            </div>
-
+    <div class="cards-wrapper">
+      <!-- CARD START -->
+      <div class="card">
+        <img src="./62.jpg" alt="Platinum Greens" />
+        <div class="card-content">
+          <h2>Platinum Greens</h2>
+          <p>Well-developed township near Ajmer Highway NH8.</p>
+          <a href="./PLATINUM.HTML.html" class="btn" target="_blank">Visit For More</a>
         </div>
+      </div>
 
-        <div id="services1">
-            <div class="box">
-                <img src="./2.jpeg" alt="">
-                <a href="./VRINDAVAN.HTML" target="_blank">
-                <h2 class="h-secondary center"> VRINDAVAN </h2>
-                <p class="center">WELL DEVELOPED TOWNSHIP AT JAGATPURA NEAR BY BOMBAY HOSTIPAL , JECERC UNIVERISTY ,
-                    POORNIMA UNIVERSITY</p>
-                <button class="btn">Visit For More</button>
-            </div>
+      <div class="card">
+        <img src="./88.jpg" alt="VRB World City" />
+        <div class="card-content">
+          <h2>VRB World City</h2>
+          <p>Located in Village Bhapura near Mahindra SEZ.</p>
+          <a href="./VRB WORLD CITY.HTML" class="btn" target="_blank">Visit For More</a>
+        </div>
+      </div>
 
-            <div class="box">
-                <img src="./12.jpeg" alt="">
-                <a href="./RIYASAT.HTML" target="_blank">
-                <h2 class="h-secondary center">RIYASAT KRISHNA RESIDENCY</h2>
-                <p class="center"> WELL DEVELOPED TOWNSHIP AT BHANKROTA NEAR BY DELHI PUBLIC SCHOOL BHANKROTA , RAJASTHAN
-                    INSTITUTE OF ENGINEERING AND TECHNOLOGY</p>
-                <button class="btn">Visit For More</button>
-            </div>
+      <div class="card">
+        <img src="./55.jpg" alt="Bhumija Empire" />
+        <div class="card-content">
+          <h2>Bhumija Empire</h2>
+          <p>Located at Khorashaymdas near New Chomp Stadium.</p>
+          <a href="./BHUMIJA EMPIRE.HTML" class="btn" target="_blank">Visit For More</a>
+        </div>
+      </div>
 
-            <div class="box">
-                <img src="./14.jpeg" alt="">
-                <a href="./DELIGHT.HTML" target="_blank">
-                <h2 class="h-secondary center">DELIGHT PARK</h2>
-                <p class="center">WELL DEVELOPED TOWNSHIP AT LADPUR ROAD,GAGWANA ,TEH.AJMER</p>
-                <button class="btn">Visit For More</button>
-            </div>
-            </div>
+      <div class="card">
+        <img src="./2.jpeg" alt="Vrindavan" />
+        <div class="card-content">
+          <h2>Vrindavan</h2>
+          <p>Near Jagatpura, close to hospitals and universities.</p>
+          <a href="./VRINDAVAN.HTML" class="btn" target="_blank">Visit For More</a>
+        </div>
+      </div>
 
-            <div id="services2">
-                <div class="box">
-                    <img src="./1.jpeg" alt="">
-                    <a href="./BHUMIJA ALANKAR.HTML" target="_blank">
-                    <h2 class="h-secondary center"> BHUMIJA ALANKAR  </h2>
-                    <p class="center">WELL DEVELOPED TOWNSHIP AT SIWAR PHATAK BINDAYAKA JAIPUR</p>
-                    <button class="btn">Visit For More</button>
-                </div>
-    
-                <div class="box">
-                    <img src="./28.jpg" alt="">
-                    <a href="./the elegance.html" target="_blank">
-                    <h2 class="h-secondary center">THE ELEGANCE TOWNSHIP </h2>
-                    <p class="center"> WELL DEVELOPED TOWNSHIP AT NEAR BY SITAPURA , EXTENSION RING ROAD</p>
-                    <button class="btn">Visit For More</button>
-                </div>
-    
-                <div class="box">
-                    <img src="./34.jpg" alt="">
-                    <a href="./VRB KOTA.HTML" target="_blank">
-                    <h2 class="h-secondary center">VRB SHREE RAMDEV RESIDENC</h2>
-                    <p class="center">WELL DEVELOPED TOWNSHIP AT NEAR BY KOTA</p>
-                    <button class="btn">Visit For More</button>
-                </div>
-                </div>
+      <div class="card">
+        <img src="./12.jpeg" alt="Riyasat Krishna" />
+        <div class="card-content">
+          <h2>Riyasat Krishna Residency</h2>
+          <p>At Bhankrota near DPS, Rajasthan Institute of Engineering.</p>
+          <a href="./RIYASAT.HTML" class="btn" target="_blank">Visit For More</a>
+        </div>
+      </div>
 
-                <div id="services3">
-                    <div class="box">
-                        <img src="./40.jpg" alt="">
-                        <a href="./SOUTHERN.HTML" target="_blank">
-                        <h2 class="h-secondary center"> THE SOUTHERN RESIDENCY </h2>
-                        <p class="center">WELL DEVELOPED TOWNSHIP AT  NEAR BY TONK ROAD</p>
-                        <button class="btn">Visit For More</button>
-                    </div>
-        
-                    <div class="box">
-                        <img src="./46.jpg" alt="">
-                        <a href="./HAPPYGREEN.HTML" target="_blank">
-                        <h2 class="h-secondary center">HAPPY GREEN  </h2>
-                        <p class="center"> WELL DEVELOPED TOWNSHIP AT NEAR BY BEGAS KALWAR ROAD</p>
-                        <button class="btn">Visit For More</button>
-                    </div>
-        
-                    <div class="box">
-                        <img src="./90.jpg" alt="">
-                        <a href="./ELITE.HTML" target="_blank">
-                        <h2 class="h-secondary center"> ELITE WORLD</h2>
-                        <p class="center">WELL DEVELOPED TOWNSHIP AT NEAR BY MAHINDRA SEZ</p>
-                        <button class="btn">Visit For More</button>
-                    </div>
-                    </div>
-    
+      <div class="card">
+        <img src="./14.jpeg" alt="Delight Park" />
+        <div class="card-content">
+          <h2>Delight Park</h2>
+          <p>Located at Ladpur Road, Gagwana, Ajmer.</p>
+          <a href="./DELIGHT.HTML" class="btn" target="_blank">Visit For More</a>
+        </div>
+      </div>
 
-        
+      <div class="card">
+        <img src="./1.jpeg" alt="Bhumija Alankar" />
+        <div class="card-content">
+          <h2>Bhumija Alankar</h2>
+          <p>Located at Siwar Phatak, Bindayaka, Jaipur.</p>
+          <a href="./BHUMIJA ALANKAR.HTML" class="btn" target="_blank">Visit For More</a>
+        </div>
+      </div>
 
+      <div class="card">
+        <img src="./28.jpg" alt="The Elegance" />
+        <div class="card-content">
+          <h2>The Elegance Township</h2>
+          <p>Located near Sitapura Extension Ring Road.</p>
+          <a href="./the elegance.html" class="btn" target="_blank">Visit For More</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="./34.jpg" alt="VRB Kota" />
+        <div class="card-content">
+          <h2>VRB Shree Ramdev Residency</h2>
+          <p>Located near Kota.</p>
+          <a href="./VRB KOTA.HTML" class="btn" target="_blank">Visit For More</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="./40.jpg" alt="Southern Residency" />
+        <div class="card-content">
+          <h2>The Southern Residency</h2>
+          <p>Located near Tonk Road.</p>
+          <a href="./SOUTHERN.HTML" class="btn" target="_blank">Visit For More</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="./46.jpg" alt="Happy Green" />
+        <div class="card-content">
+          <h2>Happy Green</h2>
+          <p>Located near Begas, Kalwar Road.</p>
+          <a href="./HAPPYGREEN.HTML" class="btn" target="_blank">Visit For More</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="./90.jpg" alt="Elite World" />
+        <div class="card-content">
+          <h2>Elite World</h2>
+          <p>Located near Mahindra SEZ.</p>
+          <a href="./ELITE.HTML" class="btn" target="_blank">Visit For More</a>
+        </div>
+      </div>
+    </div>
+  </section>
 </body>
-
 </html>
