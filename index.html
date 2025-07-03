@@ -9,8 +9,154 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@400..800&family=Bree+Serif&display=swap" rel="stylesheet">
-   <link rel="stylesheet" href="css1.css">
-  
+  <style>
+    body {
+      font-family: 'Baloo Bhai 2', cursive;
+      margin: 0;
+      padding-bottom: 80px; /* for sticky footer space */
+    }
+
+    #navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: linear-gradient(90deg, #004d40, #00796b);
+      padding: 15px 30px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    #navbar #logo img {
+      height: 100px;
+    }
+
+    #navbar ul {
+      list-style: none;
+      display: flex;
+      gap: 25px;
+    }
+
+    #navbar ul li a {
+      text-decoration: none;
+      color: #fff;
+      font-weight: 600;
+      font-size: 1.1rem;
+      transition: all 0.3s ease-in-out;
+    }
+
+    #navbar ul li a:hover {
+      color: #ffd700;
+    }
+
+    #home {
+      background: url('64.jpg')
+    }
+
+    #home h1 {
+      background: rgba(0, 121, 107, 0.7);
+      padding: 20px 40px;
+      border-radius: 10px;
+      font-size: 2.5rem;
+    }
+
+    .services-container {
+      padding: 40px 20px;
+    }
+
+    .h-primary {
+      text-align: center;
+      font-size: 2.5rem;
+      color: #00796b;
+      margin-bottom: 30px;
+    }
+
+    #services {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .box {
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+      overflow: hidden;
+      transition: 0.3s ease;
+    }
+
+    .box:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 24px rgba(0,0,0,0.15);
+    }
+
+    .box img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+    }
+
+    .box h2 {
+      text-align: center;
+      margin: 15px 0 10px;
+      color: #004d40;
+    }
+
+    .box p {
+      padding: 0 20px 20px;
+      text-align: center;
+      color: #555;
+    }
+
+    .btn {
+      display: block;
+      margin: 0 auto 20px;
+      background-color: #00796b;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .btn:hover {
+      background-color: #004d40;
+    }
+
+    .bottom-footer {
+      background-color: #004d40;
+      padding: 20px 0;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      z-index: 999;
+    }
+
+    .footer-row {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+
+    .footer-link {
+      color: white;
+      text-decoration: none;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      font-size: 15px;
+    }
+
+    .footer-link i {
+      font-size: 20px;
+      margin-bottom: 5px;
+    }
+  </style>
 </head>
 
 <body>
