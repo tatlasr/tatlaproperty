@@ -1,454 +1,420 @@
-<HTML>
-<HEAD>
-<TITLE>PICTURES</TITLE>
-<link rel="stylesheet" href="slide.css">
-</HEAD>
-<BODY>
-<div class="slideshow-container">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PICTURES</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+    }
 
-    <!-- Slide 1 -->
-    <div class="slide">
- <a href="#" target="_blank">
-            <img src="2.JPG" alt="Slide 1"></a>
-    </div>
+    body {
+      background: linear-gradient(to right, #e3f2fd, #ffffff);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      padding: 20px;
+    }
 
-    <!-- Slide 2 -->
-    <div class="slide">
-        <a href="#" target="_blank">
-            <img src="3.JPG"alt="Slide 2">
-        </a>
-    </div>
+    h1 {
+      font-size: 2.2rem;
+      margin-bottom: 20px;
+      color: #0d47a1;
+      font-weight: 600;
+    }
 
-    <!-- Slide 3 -->
-    <div class="slide">
-        <a href="https://www.example.com" target="_blank">
-            <img src="4.JPG" alt="Slide 3">
-        </a>
-    </div>
+    .slideshow-container {
+      width: 100%;
+      max-width: 1000px;
+      position: relative;
+      overflow: hidden;
+      border-radius: 16px;
+      box-shadow: 0 12px 24px rgba(0,0,0,0.15);
+      background-color: #fff;
+    }
 
-<!-- Slide 4 -->
-    <div class="slide">
-        <a href="https://www.example.com" target="_blank">
-            <img src="5.JPG" alt="Slide 4">
-        </a>
-    </div>
+    .slide {
+      display: none;
+      animation: fade 1s ease-in-out;
+      text-align: center;
+    }
 
-<!-- Slide 5 -->
-    <div class="slide">
-        <a href="https://www.example.com" target="_blank">
-            <img src="6.JPG." alt="Slide 5">
-        </a>
-    </div>
-<!-- Slide 6 -->
-    <div class="slide">
-        <a href="https://www.example.com" target="_blank">
-            <img src="7.JPG" alt="Slide 6">
-        </a>
-    </div>
-<!-- Slide 7 -->
-    <div class="slide">
-        <a href="https://www.example.com" target="_blank">
-            <img src="8.JPG" alt="Slide 7">
-        </a>
-    </div>
-<!-- Slide 8 -->
-    <div class="slide">
-        <a href="https://www.example.com" target="_blank">
-            <img src="9.JPG" alt="Slide 8">
-        </a>
-    </div>
-<!-- Slide 9 -->
-    <div class="slide">
-        <a href="https://www.example.com" target="_blank">
-            <img src="10.JPG" alt="Slide 9">
-        </a>
-    </div>
+    .slide img {
+      width: 100%;
+      height: auto;
+      max-height: 90vh;
+      border-radius: 16px;
+    }
 
-<!-- Slide 10 -->
-    <div class="slide">
-        <a href="https://www.example.com" target="_blank">
-            <img src="11.JPG" alt="Slide 10">
-        </a>
-    </div>
+    .active {
+      display: block;
+    }
 
-<!-- Slide 11 -->
-    <div class="slide">
-        <a href="https://www.example.com" target="_blank">
-            <img src="12.JPG" alt="Slide 11">
-        </a>
-    </div>
+    @keyframes fade {
+      from { opacity: 0.4; }
+      to { opacity: 1; }
+    }
 
-<!-- Slide 12-->
-    <div class="slide">
-        <a href="https://www.example.com" target="_blank">
-            <img src="13.JPG" alt="Slide 12">
-        </a>
-    </div>
+    .prev, .next {
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      padding: 14px;
+      font-size: 28px;
+      color: white;
+      background-color: rgba(0, 0, 0, 0.6);
+      border-radius: 50%;
+      transform: translateY(-50%);
+      user-select: none;
+      transition: background-color 0.3s, transform 0.3s;
+      z-index: 10;
+    }
 
-    <!-- Slide 13 -->
-    <div class="slide">
- <a href="#" target="_blank">
-            <img src="14.JPG" alt="Slide 13"></a>
-    </div>
+    .prev:hover, .next:hover {
+      background-color: rgba(0, 0, 0, 0.8);
+      transform: translateY(-50%) scale(1.1);
+    }
 
-    <!-- Slide 14 -->
-    <div class="slide">
-        <a href="#" target="_blank">
-            <img src="15.JPG"alt="Slide 14">
-        </a>
-    </div>
+    .prev { left: 15px; }
+    .next { right: 15px; }
 
-    <!-- Slide 15 -->
-    <div class="slide">
-        <a href="https://www.example.com" target="_blank">
-            <img src="16.JPG" alt="Slide 15">
-        </a>
-    </div>
+    .caption {
+      text-align: center;
+      padding: 12px;
+      background: rgba(255, 255, 255, 0.8);
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      font-size: 1rem;
+      color: #333;
+      border-radius: 0 0 16px 16px;
+    }
 
-<!-- Slide 16 -->
-    <div class="slide">
-        <a href="https://www.example.com" target="_blank">
-            <img src="17.JPG" alt="Slide 16">
-        </a>
-    </div>
+    .counter {
+      text-align: center;
+      margin-top: 10px;
+      color: #0d47a1;
+      font-weight: 500;
+    }
 
-<!-- Slide 17 -->
-    <div class="slide">
-        <a href="https://www.example.com" target="_blank">
-            <img src="18.JPG" alt="Slide 17">
-        </a>
+    @media (max-width: 768px) {
+      .prev, .next {
+        font-size: 20px;
+        padding: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>Our Picture Gallery</h1>
+  <div class="slideshow-container">
+    <!-- Slides -->
+    <div class="slide active">
+      <img src="2.JPG" alt="Slide 1">
+      <div class="caption">Slide 1 of 67</div>
     </div>
-<!-- Slide 18 -->
+    <!-- Add the rest of the slides here, same structure -->
     <div class="slide">
-        <a href="https://www.example.com" target="_blank">
-            <img src="19.JPG" alt="Slide 18">
-        </a>
+      <img src="3.JPG" alt="Slide 2">
+      <div class="caption">Slide 2 of 67</div>
     </div>
-<!-- Slide 19 -->
     <div class="slide">
-        <a href="https://www.example.com" target="_blank">
-            <img src="20.jpg" alt="Slide 19">
-        </a>
+      <img src="4.JPG" alt="Slide 3">
+      <div class="caption">Slide 3 of 67</div>
     </div>
-<!-- Slide 20 -->
     <div class="slide">
-        <a href="https://www.example.com" target="_blank">
-            <img src="21.jpg" alt="Slide 20">
-        </a>
+      <img src="5.JPG" alt="Slide 4">
+      <div class="caption">Slide 4 of 67</div>
     </div>
-<!-- Slide 21 -->
     <div class="slide">
-        <a href="https://www.example.com" target="_blank">
-            <img src="22.jpg" alt="Slide 21">
-        </a>
+      <img src="6.JPG" alt="Slide 5">
+      <div class="caption">Slide 5 of 67</div>
     </div>
-
-<!-- Slide 22 -->
     <div class="slide">
-        <a href="https://www.example.com" target="_blank">
-            <img src="23.jpg" alt="Slide 22">
-        </a>
+      <img src="7.JPG" alt="Slide 6">
+      <div class="caption">Slide 6 of 67</div>
     </div>
-
-<!-- Slide 23 -->
     <div class="slide">
-        <a href="https://www.example.com" target="_blank">
-            <img src="24.jpg" alt="Slide 23">
-        </a>
+      <img src="8.JPG" alt="Slide 7">
+      <div class="caption">Slide 7 of 67</div>
     </div>
-
-<!-- Slide 24-->
     <div class="slide">
-        <a href="https://www.example.com" target="_blank">
-            <img src="25.jpg" alt="Slide 24">
-        </a>
+      <img src="9.JPG" alt="Slide 8">
+      <div class="caption">Slide 8 of 67</div>
     </div>
-
-    !-- Slide 25 -->
     <div class="slide">
- <a href="#" target="_blank">
-            <img src="26.jpg" alt="Slide 25"></a>
+      <img src="10.JPG" alt="Slide 9">
+      <div class="caption">Slide 9 of 67</div>
     </div>
-
-    <!-- Slide 26 -->
     <div class="slide">
-        <a href="#" target="_blank">
-            <img src="27.jpg"alt="Slide 26">
-        </a>
+      <img src="11.JPG" alt="Slide 10">
+      <div class="caption">Slide 10 of 67</div>
     </div>
-
-    <!-- Slide 27 -->
     <div class="slide">
-        <a href="https://www.example.com" target="_blank">
-            <img src="28.jpg" alt="Slide 27">
-        </a>
+      <img src="12.JPG" alt="Slide 11">
+      <div class="caption">Slide 11 of 67</div>
     </div>
-
-<!-- Slide 28 -->
     <div class="slide">
-        <a href="https://www.example.com" target="_blank">
-            <img src="29.jpg" alt="Slide 28">
-        </a>
+      <img src="13.JPG" alt="Slide 12">
+      <div class="caption">Slide 12 of 67</div>
     </div>
-
-<!-- Slide 29 -->
     <div class="slide">
-        <a href="https://www.example.com" target="_blank">
-            <img src="30.jpg" alt="Slide 29">
-        </a>
+      <img src="14.JPG" alt="Slide 13">
+      <div class="caption">Slide 13 of 67</div>
     </div>
-<!-- Slide 30 -->
     <div class="slide">
-        <a href="https://www.example.com" target="_blank">
-            <img src="31.jpg" alt="Slide 30">
-        </a>
+      <img src="15.JPG" alt="Slide 14">
+      <div class="caption">Slide 14 of 67</div>
     </div>
-<!-- Slide 31 -->
     <div class="slide">
-        <a href="https://www.example.com" target="_blank">
-            <img src="32.jpg" alt="Slide 31">
-        </a>
+      <img src="16.JPG" alt="Slide 15">
+      <div class="caption">Slide 15 of 67</div>
     </div>
-<!-- Slide 32 -->
     <div class="slide">
-        <a href="https://www.example.com" target="_blank">
-            <img src="33.jpg" alt="Slide 32">
-        </a>
+      <img src="17.JPG" alt="Slide 16">
+      <div class="caption">Slide 16 of 67</div>
     </div>
-<!-- Slide 33 -->
     <div class="slide">
-        <a href="https://www.example.com" target="_blank">
-            <img src="34.jpg" alt="Slide 33">
-        </a>
+      <img src="18.JPG" alt="Slide 17">
+      <div class="caption">Slide 17 of 67</div>
     </div>
-
-<!-- Slide 34 -->
     <div class="slide">
-        <a href="https://www.example.com" target="_blank">
-            <img src="35.jpg" alt="Slide 34">
-        </a>
+      <img src="19.JPG" alt="Slide 18">
+      <div class="caption">Slide 18 of 67</div>
     </div>
-
-<!-- Slide 35 -->
     <div class="slide">
-        <a href="https://www.example.com" target="_blank">
-            <img src="36.jpg" alt="Slide 35">
-        </a>
+      <img src="20.jpg" alt="Slide 19">
+      <div class="caption">Slide 19 of 67</div>
     </div>
-
-<!-- Slide 36-->
     <div class="slide">
-        <a href="https://www.example.com" target="_blank">
-            <img src="37.jpg" alt="Slide 36">
-        </a>
+      <img src="21.jpg" alt="Slide 20">
+      <div class="caption">Slide 20 of 67</div>
     </div>
-  <!-- Slide 37 -->
     <div class="slide">
- <a href="#" target="_blank">
-            <img src="38.jpg" alt="Slide 37"></a>
+      <img src="22.jpg" alt="Slide 21">
+      <div class="caption">Slide 21 of 67</div>
     </div>
-
-    <!-- Slide 38 -->
     <div class="slide">
-        <a href="#" target="_blank">
-            <img src="39.jpg"alt="Slide 38">
-        </a>
+      <img src="23.jpg" alt="Slide 22">
+      <div class="caption">Slide 22 of 67</div>
     </div>
-
-    <!-- Slide 39 -->
     <div class="slide">
-        <a href="https://www.example.com" target="_blank">
-            <img src="40.jpg" alt="Slide 39">
-        </a>
+      <img src="24.jpg" alt="Slide 23">
+      <div class="caption">Slide 23 of 67</div>
     </div>
-
-<!-- Slide 40 -->
     <div class="slide">
-        <a href="https://www.example.com" target="_blank">
-            <img src="41.jpg" alt="Slide 40">
-        </a>
+      <img src="25.jpg" alt="Slide 24">
+      <div class="caption">Slide 24 of 67</div>
     </div>
-
-<!-- Slide 41 -->
     <div class="slide">
-        <a href="https://www.example.com" target="_blank">
-            <img src="42.jpg" alt="Slide 41">
-        </a>
+      <img src="26.jpg" alt="Slide 25">
+      <div class="caption">Slide 25 of 67</div>
     </div>
-<!-- Slide 42-->
     <div class="slide">
-        <a href="https://www.example.com" target="_blank">
-            <img src="43.jpg" alt="Slide 42">
-        </a>
+      <img src="27.jpg" alt="Slide 26">
+      <div class="caption">Slide 26 of 67</div>
     </div>
-<!-- Slide 43 -->
     <div class="slide">
-        <a href="https://www.example.com" target="_blank">
-            <img src="44.jpg" alt="Slide 43">
-        </a>
+      <img src="28.jpg" alt="Slide 27">
+      <div class="caption">Slide 27 of 67</div>
     </div>
-<!-- Slide 44 -->
     <div class="slide">
-        <a href="https://www.example.com" target="_blank">
-            <img src="45.jpg" alt="Slide 44">
-        </a>
+      <img src="29.jpg" alt="Slide 28">
+      <div class="caption">Slide 28 of 67</div>
     </div>
-<!-- Slide 45 -->
     <div class="slide">
-        <a href="https://www.example.com" target="_blank">
-            <img src="46.jpg" alt="Slide 45">
-        </a>
+      <img src="30.jpg" alt="Slide 29">
+      <div class="caption">Slide 29 of 67</div>
     </div>
-
-<!-- Slide 46 -->
     <div class="slide">
-        <a href="https://www.example.com" target="_blank">
-            <img src="47.jpg" alt="Slide 46">
-        </a>
+      <img src="31.jpg" alt="Slide 30">
+      <div class="caption">Slide 30 of 67</div>
     </div>
-
-<!-- Slide 47 -->
     <div class="slide">
-        <a href="https://www.example.com" target="_blank">
-            <img src="48.jpg" alt="Slide 47">
-        </a>
+      <img src="32.jpg" alt="Slide 31">
+      <div class="caption">Slide 31 of 67</div>
     </div>
-
-<!-- Slide 48-->
     <div class="slide">
-        <a href="https://www.example.com" target="_blank">
-            <img src="49.jpg" alt="Slide 48">
-        </a>
+      <img src="33.jpg" alt="Slide 32">
+      <div class="caption">Slide 32 of 67</div>
     </div>
- <!-- Slide 49 -->
     <div class="slide">
- <a href="#" target="_blank">
-            <img src="50.jpg" alt="Slide 49"></a>
+      <img src="34.jpg" alt="Slide 33">
+      <div class="caption">Slide 33 of 67</div>
     </div>
-
-    <!-- Slide 50 -->
     <div class="slide">
-        <a href="#" target="_blank">
-            <img src="51.jpg"alt="Slide 50">
-        </a>
+      <img src="35.jpg" alt="Slide 34">
+      <div class="caption">Slide 34 of 67</div>
     </div>
-
-    <!-- Slide 51 -->
     <div class="slide">
-        <a href="https://www.example.com" target="_blank">
-            <img src="52.jpg" alt="Slide 51">
-        </a>
+      <img src="36.jpg" alt="Slide 35">
+      <div class="caption">Slide 35 of 67</div>
     </div>
-
-<!-- Slide 52 -->
     <div class="slide">
-        <a href="https://www.example.com" target="_blank">
-            <img src="53.jpg" alt="Slide 52">
-        </a>
+      <img src="37.jpg" alt="Slide 36">
+      <div class="caption">Slide 36 of 67</div>
     </div>
-
-<!-- Slide 53 -->
     <div class="slide">
-        <a href="https://www.example.com" target="_blank">
-            <img src="54.jpg" alt="Slide 53">
-        </a>
+      <img src="38.jpg" alt="Slide 37">
+      <div class="caption">Slide 37 of 67</div>
     </div>
-<!-- Slide 54 -->
     <div class="slide">
-        <a href="https://www.example.com" target="_blank">
-            <img src="55.jpg" alt="Slide 54">
-        </a>
+      <img src="39.jpg" alt="Slide 38">
+      <div class="caption">Slide 38 of 67</div>
     </div>
-<!-- Slide 55 -->
     <div class="slide">
-        <a href="https://www.example.com" target="_blank">
-            <img src="62.jpg" alt="Slide 55">
-        </a>
+      <img src="40.jpg" alt="Slide 39">
+      <div class="caption">Slide 39 of 67</div>
     </div>
-<!-- Slide 56 -->
     <div class="slide">
-        <a href="https://www.example.com" target="_blank">
-            <img src="63.jpg" alt="Slide 56">
-        </a>
+      <img src="41.jpg" alt="Slide 40">
+      <div class="caption">Slide 40 of 67</div>
     </div>
-<!-- Slide 57 -->
     <div class="slide">
-        <a href="https://www.example.com" target="_blank">
-            <img src="64" alt="Slide 57">
-        </a>
+      <img src="42.jpg" alt="Slide 41">
+      <div class="caption">Slide 41 of 67</div>
     </div>
-
-<!-- Slide 58 -->
     <div class="slide">
-        <a href="https://www.example.com" target="_blank">
-            <img src="65.jpg" alt="Slide 58">
-        </a>
+      <img src="43.jpg" alt="Slide 42">
+      <div class="caption">Slide 42 of 67</div>
     </div>
-
-<!-- Slide 59 -->
     <div class="slide">
-        <a href="https://www.example.com" target="_blank">
-            <img src="66.jpg" alt="Slide 59">
-        </a>
+      <img src="44.jpg" alt="Slide 43">
+      <div class="caption">Slide 43 of 67</div>
+    </div>
+    <div class="slide">
+      <img src="45.jpg" alt="Slide 44">
+      <div class="caption">Slide 44 of 67</div>
+    </div>
+    <div class="slide">
+      <img src="46.jpg" alt="Slide 45">
+      <div class="caption">Slide 45 of 67</div>
+    </div>
+    <div class="slide">
+      <img src="47.jpg" alt="Slide 46">
+      <div class="caption">Slide 46 of 67</div>
+    </div>
+    <div class="slide">
+      <img src="48.jpg" alt="Slide 47">
+      <div class="caption">Slide 47 of 67</div>
+    </div>
+    <div class="slide">
+      <img src="49.jpg" alt="Slide 48">
+      <div class="caption">Slide 48 of 67</div>
+    </div>
+    <div class="slide">
+      <img src="50.jpg" alt="Slide 49">
+      <div class="caption">Slide 49 of 67</div>
+    </div>
+    <div class="slide">
+      <img src="51.jpg" alt="Slide 50">
+      <div class="caption">Slide 50 of 67</div>
+    </div>
+    <div class="slide">
+      <img src="52.jpg" alt="Slide 51">
+      <div class="caption">Slide 51 of 67</div>
+    </div>
+    <div class="slide">
+      <img src="53.jpg" alt="Slide 52">
+      <div class="caption">Slide 52 of 67</div>
+    </div>
+    <div class="slide">
+      <img src="54.jpg" alt="Slide 53">
+      <div class="caption">Slide 53 of 67</div>
+    </div>
+    <div class="slide">
+      <img src="55.jpg" alt="Slide 54">
+      <div class="caption">Slide 54 of 67</div>
+    </div>
+    <div class="slide">
+      <img src="62.jpg" alt="Slide 55">
+      <div class="caption">Slide 55 of 67</div>
+    </div>
+    <div class="slide">
+      <img src="63.jpg" alt="Slide 56">
+      <div class="caption">Slide 56 of 67</div>
+    </div>
+    <div class="slide">
+      <img src="64" alt="Slide 57">
+      <div class="caption">Slide 57 of 67</div>
+    </div>
+    <div class="slide">
+      <img src="65.jpg" alt="Slide 58">
+      <div class="caption">Slide 58 of 67</div>
+    </div>
+    <div class="slide">
+      <img src="66.jpg" alt="Slide 59">
+      <div class="caption">Slide 59 of 67</div>
+    </div>
+    <div class="slide">
+      <img src="68.jpg" alt="Slide 60">
+      <div class="caption">Slide 60 of 67</div>
+    </div>
+    <div class="slide">
+      <img src="69.jpg" alt="Slide 61">
+      <div class="caption">Slide 61 of 67</div>
+    </div>
+    <div class="slide">
+      <img src="70.jpg" alt="Slide 62">
+      <div class="caption">Slide 62 of 67</div>
+    </div>
+    <div class="slide">
+      <img src="71.jpg" alt="Slide 63">
+      <div class="caption">Slide 63 of 67</div>
+    </div>
+    <div class="slide">
+      <img src="72.jpg" alt="Slide 64">
+      <div class="caption">Slide 64 of 67</div>
+    </div>
+    <div class="slide">
+      <img src="73.jpg" alt="Slide 65">
+      <div class="caption">Slide 65 of 67</div>
+    </div>
+    <div class="slide">
+      <img src="74.jpg" alt="Slide 66">
+      <div class="caption">Slide 66 of 67</div>
+    </div>
+    <div class="slide">
+      <img src="75.jpg" alt="Slide 67">
+      <div class="caption">Slide 67 of 67</div>
     </div>
 
-<!-- Slide 60-->
-    <div class="slide">
-        <a href="https://www.example.com" target="_blank">
-            <img src="68.jpg" alt="Slide 60">
-        </a>
-    </div>
-<!-- Slide 61 -->
-    <div class="slide">
- <a href="#" target="_blank">
-            <img src="69.jpg" alt="Slide 61"></a>
-    </div>
+    <!-- Navigation buttons -->
+    <a class="prev" onclick="moveSlide(-1)">&#10094;</a>
+    <a class="next" onclick="moveSlide(1)">&#10095;</a>
+  </div>
+  <div class="counter" id="counter">1 / 67</div>
 
-    <!-- Slide 62 -->
-    <div class="slide">
-        <a href="#" target="_blank">
-            <img src="70.jpg"alt="Slide 62">
-        </a>
-    </div>
+  <script>
+    let slideIndex = 0;
+    const slides = document.querySelectorAll(".slide");
+    const counter = document.getElementById("counter");
 
-    <!-- Slide 63 -->
-    <div class="slide">
-        <a href="https://www.example.com" target="_blank">
-            <img src="71.jpg" alt="Slide 63">
-        </a>
-    </div>
+    function showSlide(index) {
+      slides.forEach((slide, i) => {
+        slide.classList.remove("active");
+        if (i === index) slide.classList.add("active");
+        const caption = slide.querySelector('.caption');
+        if (caption) caption.textContent = `Slide ${i + 1} of ${slides.length}`;
+      });
+      counter.textContent = `${index + 1} / ${slides.length}`;
+    }
 
-<!-- Slide 64 -->
-    <div class="slide">
-        <a href="https://www.example.com" target="_blank">
-            <img src="72.jpg" alt="Slide 64">
-        </a>
-    </div>
+    function moveSlide(n) {
+      slideIndex += n;
+      if (slideIndex >= slides.length) slideIndex = 0;
+      if (slideIndex < 0) slideIndex = slides.length - 1;
+      showSlide(slideIndex);
+    }
 
-<!-- Slide 65 -->
-    <div class="slide">
-        <a href="https://www.example.com" target="_blank">
-            <img src="73.jpg" alt="Slide 65">
-        </a>
-    </div>
-<!-- Slide 66 -->
-    <div class="slide">
-        <a href="https://www.example.com" target="_blank">
-            <img src="74.jpg" alt="Slide 66">
-        </a>
-    </div>
-<!-- Slide 67 -->
-    <div class="slide">
-        <a href="https://www.example.com" target="_blank">
-            <img src="75.jpg" alt="Slide 67">
-        </a>
-    </div>
-</div>
-<!-- Navigation buttons -->
-<a class="prev" onclick="moveSlide(-1)">&#10094;</a>
-<a class="next" onclick="moveSlide(1)">&#10095;</a>
-
-
-<script src="slide.js"></script>
-</BODY>
-<HTML>
+    // Auto-play
+    setInterval(() => moveSlide(1), 5000);
+  </script>
+</body>
+</html>
