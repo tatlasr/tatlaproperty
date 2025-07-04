@@ -1,88 +1,212 @@
-<HTML>
-<HEAD>
-<TITLE> ELITE WORLD</TITLE>
-  <link rel="stylesheet" href="slide.css">
-</HEAD>
-<BODY>
-<BODY BGCOLOR="skyblue">
-</BR></BR>
-  <H1 ALIGN="CENTER"> ELITE WORLD &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; CONTACT US: 7767933864 </H1>
-<H2 ALIGN="CENTER">WELL DEVELOPED JDA TOWNSHIP&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;LOKESHYADAV05299@GMAIL.COM</H2>
-<div class="slideshow-container">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ELITE WORLD</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary-color: #1e88e5;
+      --secondary-color: #1565c0;
+      --text-dark: #212121;
+      --text-light: #ffffff;
+      --bg-light: #e3f2fd;
+      --bg-white: #ffffff;
+      --accent-color: #64b5f6;
+      --highlight: #ffd54f;
+    }
 
-    <!-- Slide 1 -->
-    <div class="slide">
- <a href="#" target="_blank">
-            <img src="90.jpg" alt="Slide 1"></a>
-    </div>
+    * {
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+      margin: 0;
+      padding: 0;
+    }
 
-    <!-- Slide 2 -->
-    <div class="slide">
-        <a href="#" target="_blank">
-            <img src="91.jpg"alt="Slide 2">
-        </a>
-    </div>
+    body {
+      background: radial-gradient(circle at top left, #bbdefb, #e3f2fd);
+      font-family: 'Poppins', sans-serif;
+      color: var(--text-dark);
+    }
 
-    <!-- Slide 3 -->
-    <div class="slide">
-        <a href="https://www.example.com" target="_blank">
-            <img src="92.jpg" alt="Slide 3">
-        </a>
-    </div>
+    header {
+      text-align: center;
+      padding: 60px 20px 40px;
+      background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
+      color: var(--text-light);
+      position: relative;
+      border-bottom: 6px solid var(--highlight);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    }
 
-<!-- Slide 4 -->
-    <div class="slide">
-        <a href="https://www.example.com" target="_blank">
-            <img src="93.jpg" alt="Slide 4">
-        </a>
-    </div>
+    header h1 {
+      font-size: 3.5rem;
+      margin-bottom: 10px;
+      text-transform: uppercase;
+      letter-spacing: 5px;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    }
 
-<!-- Slide 5 -->
-    <div class="slide">
-        <a href="https://www.example.com" target="_blank">
-            <img src="94.jpg" alt="Slide 5">
-        </a>
-    </div>
-<!-- Slide 6 -->
-    <div class="slide">
-        <a href="https://www.example.com" target="_blank">
-            <img src="95.jpg" alt="Slide 6">
-        </a>
-    </div>
-    <!-- Slide 7 -->
-    <div class="slide">
-        <a href="https://www.example.com" target="_blank">
-            <img src="96.jpg" alt="Slide 7">
-        </a>
-    </div>
+    header h2 {
+      font-size: 1rem;
+      font-weight: 400;
+      opacity: 0.9;
+    }
 
-<!-- Slide 8 -->
-    <div class="slide">
-        <a href="https://www.example.com" target="_blank">
-            <img src="97.jpg" alt="Slide 8">
-        </a>
-    </div>
+    .slideshow-container {
+      position: relative;
+      max-width: 1000px;
+      margin: 60px auto;
+      overflow: hidden;
+      border-radius: 28px;
+      box-shadow: 0 16px 36px rgba(0, 0, 0, 0.2);
+    }
 
-<!-- Slide 9 -->
-    <div class="slide">
-        <a href="https://www.example.com" target="_blank">
-            <img src="98.jpg" alt="Slide 9">
-        </a>
-    </div>
-<!-- Slide 10 -->
-    <div class="slide">
-        <a href="https://www.example.com" target="_blank">
-            <img src="99.jpg" alt="Slide 10">
-        </a>
-    </div>
-</div>
-<!-- Navigation buttons -->
-<a class="prev" onclick="moveSlide(-1)">&#10094;</a>
-<a class="next" onclick="moveSlide(1)">&#10095;</a>
-<H3 ALIGN="CENTER">LOCATION = NEAR BY MAHINDRA SEZ</H3>
-<H4 ALIGN="CENTER">PRICE = CONTACT ME </H4>
-<H5 ALIGN="CENTER"> PLOT SIZE = STARTING FROM 111 YARD</H5>
-<H6> FACILITIES = * BOOM BARRIER , *LANDSCAPED PARK , *UNDERGROUND WATER PIPE LINE , *OUTER BOUNDARY ,*BOREWELL  *UNDERGROUND ELECTRIFICATION , ECO-FRIENDLY TOWNSHIP , UNDERGROUND SEWAGE LINE , GUARD HOUSE , PATHWAY , PLOT DEMARCATION </H6>
-<script src="slide.js"></script>
-</BODY>
-</HTML>
+    .slide {
+      display: none;
+      animation: fade 1.5s ease-in-out;
+    }
+
+    @keyframes fade {
+      from {opacity: 0.5; transform: scale(1.02);}
+      to {opacity: 1; transform: scale(1);}
+    }
+
+    .slide img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 28px;
+    }
+
+    .prev, .next {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: var(--primary-color);
+      color: #fff;
+      font-size: 32px;
+      padding: 12px 18px;
+      border-radius: 50%;
+      cursor: pointer;
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+      transition: background-color 0.3s, transform 0.3s;
+      z-index: 10;
+    }
+
+    .prev:hover, .next:hover {
+      background-color: var(--secondary-color);
+      transform: translateY(-50%) scale(1.15);
+    }
+
+    .prev { left: 24px; }
+    .next { right: 24px; }
+
+    .info {
+      background: var(--bg-white);
+      border-radius: 24px;
+      max-width: 1000px;
+      margin: 50px auto;
+      padding: 70px 35px;
+      text-align: center;
+      box-shadow: 0 6px 24px rgba(0, 0, 0, 0.1);
+      line-height: 1.8;
+    }
+
+    .info h3 {
+      font-size: 2.4rem;
+      color: var(--primary-color);
+      margin-bottom: 18px;
+    }
+
+    .info h4, .info h5 {
+      font-size: 1.3rem;
+      color: #333;
+      margin-bottom: 12px;
+    }
+
+    .info h6 {
+      font-size: 1.05rem;
+      color: #555;
+      margin-top: 30px;
+      font-weight: 400;
+      padding: 0 10px;
+    }
+
+    footer {
+      text-align: center;
+      background: var(--secondary-color);
+      color: var(--text-light);
+      padding: 25px;
+      font-size: 0.95rem;
+      letter-spacing: 0.5px;
+    }
+
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2.2rem;
+      }
+      .info h3 {
+        font-size: 1.6rem;
+      }
+      .info h4, .info h5 {
+        font-size: 1.1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>ELITE WORLD</h1>
+    <h2>Contact: 7767933864 | Email: lokeshyadav05299@gmail.com</h2>
+  </header>
+
+  <div class="slideshow-container">
+    <div class="slide"><a href="#"><img src="90.jpg" alt="Slide 1"></a></div>
+    <div class="slide"><a href="#"><img src="91.jpg" alt="Slide 2"></a></div>
+    <div class="slide"><a href="#"><img src="92.jpg" alt="Slide 3"></a></div>
+    <div class="slide"><a href="#"><img src="93.jpg" alt="Slide 4"></a></div>
+    <div class="slide"><a href="#"><img src="94.jpg" alt="Slide 5"></a></div>
+    <div class="slide"><a href="#"><img src="95.jpg" alt="Slide 6"></a></div>
+    <div class="slide"><a href="#"><img src="96.jpg" alt="Slide 7"></a></div>
+    <div class="slide"><a href="#"><img src="97.jpg" alt="Slide 8"></a></div>
+    <div class="slide"><a href="#"><img src="98.jpg" alt="Slide 9"></a></div>
+    <div class="slide"><a href="#"><img src="99.jpg" alt="Slide 10"></a></div>
+    <a class="prev" onclick="moveSlide(-1)">&#10094;</a>
+    <a class="next" onclick="moveSlide(1)">&#10095;</a>
+  </div>
+
+  <div class="info">
+    <h3>Location: Near Mahindra SEZ</h3>
+    <h4>Price: Contact for Details</h4>
+    <h5>Plot Size: Starting from 111 Yards</h5>
+    <h6>Facilities Include: Boom Barrier, Landscaped Park, Underground Water Pipeline, Outer Boundary, Borewell, Underground Electrification, Eco-Friendly Township, Underground Sewage Line, Guard House, Pathway, and Plot Demarcation.</h6>
+  </div>
+
+  <footer>
+    &copy; 2025 ELITE WORLD | Designed by Lokesh Yadav
+  </footer>
+
+  <script>
+    let slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+      let slides = document.getElementsByClassName("slide");
+      for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) slideIndex = 1;
+      slides[slideIndex - 1].style.display = "block";
+      setTimeout(showSlides, 3000);
+    }
+
+    function moveSlide(n) {
+      slideIndex += n - 1;
+      showSlides();
+    }
+  </script>
+</body>
+</html>
