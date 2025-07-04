@@ -1,64 +1,274 @@
-<HTML>
-<HEAD>
-<TITLE>HAPPY GREEN</TITLE>
-<link rel="stylesheet" href="slide.css">
-</HEAD>
-<BODY>
-<BODY BGCOLOR="LIGHTPINK">
-</BR></BR>
-<H1 ALIGN="CENTER"><I><B>HAPPY GREEN &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; CONTACT US: 7767933864 </B></I></H1>
-<H2 ALIGN="CENTER">WELL DEVELOPED JDA TOWNSHIP&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;LOKESHYADAV05299@GMAIL.COM</H2>
-<div class="slideshow-container">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>HAPPY GREEN</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+    }
 
-    <!-- Slide 1 -->
-    <div class="slide">
- <a href="#" target="_blank">
-            <img src="44.jpg" alt="Slide 1"></a>
-    </div>
+    body {
+      background: linear-gradient(to right, #f0f2f5, #ffffff);
+      color: #333;
+      line-height: 1.6;
+      padding: 40px 20px;
+    }
 
-    <!-- Slide 2 -->
-    <div class="slide">
-        <a href="#" target="_blank">
-            <img src="45.jpg"alt="Slide 2">
-        </a>
-    </div>
+    header {
+      text-align: center;
+      background: linear-gradient(to right, #2c3e50, #4ca1af);
+      color: #fff;
+      padding: 50px 20px;
+      border-radius: 15px;
+      margin-bottom: 50px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    }
 
-    <!-- Slide 3 -->
-    <div class="slide">
-        <a href="https://www.example.com" target="_blank">
-            <img src="46.jpg" alt="Slide 3">
-        </a>
-    </div>
+    header h1 {
+      font-size: 3.2em;
+      margin-bottom: 15px;
+      letter-spacing: 3px;
+      text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+    }
 
-<!-- Slide 4 -->
-    <div class="slide">
-        <a href="https://www.example.com" target="_blank">
-            <img src="47.jpg" alt="Slide 4">
-        </a>
-    </div>
+    header h2 {
+      font-size: 1.2em;
+      font-weight: 400;
+      color: #e0e0e0;
+    }
 
-<!-- Slide 5 -->
-    <div class="slide">
-        <a href="https://www.example.com" target="_blank">
-            <img src="48.jpg" alt="Slide 5">
-        </a>
-    </div>
-<!-- Slide 6 -->
-    <div class="slide">
-        <a href="https://www.example.com" target="_blank">
-            <img src="49.jpg" alt="Slide 6">
-        </a>
-    </div>
-</div>
-<!-- Navigation buttons -->
-<a class="prev" onclick="moveSlide(-1)">&#10094;</a>
-<a class="next" onclick="moveSlide(1)">&#10095;</a>
+    .slideshow-container {
+      position: relative;
+      max-width: 100%;
+      margin: auto;
+      overflow: hidden;
+      border-radius: 15px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    }
 
+    .slide {
+      display: none;
+      width: 100%;
+    }
 
-<H3 ALIGN="CENTER">LOCATION = NEAR  BY BEGAS KALWAR ROAD </H3>
-<H4 ALIGN="CENTER">PRICE = CONTACT ME </H4>
-<H5 ALIGN="CENTER"> PLOT SIZE = STARTING FROM 111 YARD</H5>
-<H6 > FACILITIES = * BOOM BARRIER , *LANDSCAPED PARK , *UNDERGROUND WATER PIPE LINE , *OUTER BOUNDARY ,*BOREWELL  *UNDERGROUND ELECTRIFICATION , ECO-FRIENDLY TOWNSHIP , UNDERGROUND SEWAGE LINE , GUARD HOUSE , PATHWAY , PLOT DEMARCATION </H6>
-<script src="slide.js"></script>
-</BODY>
-</HTML>
+    .slide img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 15px;
+      transition: transform 0.5s ease;
+    }
+
+    .slide img:hover {
+      transform: scale(1.02);
+    }
+
+    .prev, .next {
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      font-size: 28px;
+      color: white;
+      background-color: rgba(0, 0, 0, 0.4);
+      padding: 12px;
+      border-radius: 50%;
+      user-select: none;
+      z-index: 10;
+      transform: translateY(-50%);
+    }
+
+    .prev {
+      left: 20px;
+    }
+
+    .next {
+      right: 20px;
+    }
+
+    .prev:hover, .next:hover {
+      background-color: rgba(0, 0, 0, 0.7);
+    }
+
+    .info-section {
+      text-align: center;
+      margin-top: 50px;
+      background-color: #ffffff;
+      padding: 30px;
+      border-radius: 15px;
+      max-width: 900px;
+      margin-left: auto;
+      margin-right: auto;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .info-section h3,
+    .info-section h4,
+    .info-section h5 {
+      margin: 20px 0;
+      font-size: 1.3em;
+      color: #2c3e50;
+    }
+
+    .facilities {
+      background-color: #ffffff;
+      border-radius: 15px;
+      padding: 30px;
+      margin: 40px auto;
+      max-width: 900px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+
+    .facilities h6 {
+      font-size: 1.5em;
+      font-weight: 600;
+      color: #2c3e50;
+      margin-bottom: 20px;
+      border-bottom: 2px solid #2ecc71;
+      display: inline-block;
+      padding-bottom: 8px;
+    }
+
+    .facilities ul {
+      list-style-type: none;
+      padding: 0;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 15px;
+      margin-top: 25px;
+    }
+
+    .facilities ul li {
+      font-size: 1em;
+      padding: 12px 20px;
+      background: #f8f8f8;
+      border-radius: 10px;
+      color: #555;
+      position: relative;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+
+    .facilities ul li::before {
+      content: "\2714";
+      position: absolute;
+      left: 15px;
+      top: 12px;
+      color: #2ecc71;
+      font-size: 1.2em;
+    }
+
+    @media (max-width: 768px) {
+      body {
+        padding: 20px 10px;
+      }
+
+      header {
+        padding: 30px 10px;
+      }
+
+      header h1 {
+        font-size: 2em;
+      }
+
+      header h2 {
+        font-size: 0.9em;
+      }
+
+      .prev, .next {
+        font-size: 20px;
+        padding: 8px;
+      }
+
+      .info-section {
+        padding: 20px;
+      }
+
+      .info-section h3,
+      .info-section h4,
+      .info-section h5 {
+        font-size: 1em;
+      }
+
+      .facilities {
+        padding: 20px;
+      }
+
+      .facilities ul {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>HAPPY GREEN</h1>
+    <h2>Contact Us: 7767933864 | Email: lokeshyadav05299@gmail.com</h2>
+  </header>
+
+  <div class="slideshow-container">
+    <div class="slide"><img src="44.jpg" alt="Slide 1"></div>
+    <div class="slide"><img src="45.jpg" alt="Slide 2"></div>
+    <div class="slide"><img src="46.jpg" alt="Slide 3"></div>
+    <div class="slide"><img src="47.jpg" alt="Slide 4"></div>
+    <div class="slide"><img src="48.jpg" alt="Slide 5"></div>
+    <div class="slide"><img src="49.jpg" alt="Slide 6"></div>
+
+    <a class="prev" onclick="moveSlide(-1)">&#10094;</a>
+    <a class="next" onclick="moveSlide(1)">&#10095;</a>
+  </div>
+
+  <div class="info-section">
+    <h3>Location: Near Begas, Kalwar Road</h3>
+    <h4>Price: Contact for Details</h4>
+    <h5>Plot Size: Starting from 111 Yards</h5>
+  </div>
+
+  <div class="facilities">
+    <h6>Facilities</h6>
+    <ul>
+      <li>Boom Barrier</li>
+      <li>Landscaped Park</li>
+      <li>Underground Water Pipeline</li>
+      <li>Outer Boundary</li>
+      <li>Borewell</li>
+      <li>Underground Electrification</li>
+      <li>Eco-Friendly Township</li>
+      <li>Underground Sewage Line</li>
+      <li>Guard House</li>
+      <li>Pathway</li>
+      <li>Plot Demarcation</li>
+    </ul>
+  </div>
+
+  <script>
+    let slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+      let slides = document.getElementsByClassName("slide");
+      for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) {slideIndex = 1;}
+      slides[slideIndex - 1].style.display = "block";
+      setTimeout(showSlides, 3500);
+    }
+
+    function moveSlide(n) {
+      slideIndex += n - 1;
+      showSlides();
+    }
+  </script>
+
+  <footer style="text-align: center; margin-top: 60px; padding: 20px; background: linear-gradient(to right, #2c3e50, #4ca1af); color: white; border-radius: 12px; font-size: 0.9em; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+  © 2025 <strong>HAPPY GREEN</strong>. All rights reserved.
+</footer>
+</body>
+</html>
