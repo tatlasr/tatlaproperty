@@ -1,63 +1,221 @@
-<HTML>
-<HEAD>
-<TITLE>RIYASAT </TITLE>
- <link rel="stylesheet" href="slide.css">
-</HEAD>
-<BODY>
-<BODY BGCOLOR="LIGHTGREEN">
-</BR></BR>
-<H1 ALIGN="CENTER">RIYASAT KRISHNA RESIDENCY &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; CONTACT US: 7767933864 </H1>
-<H2 ALIGN="CENTER">WELL DEVELOPED JDA TOWNSHIP&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;LOKESHYADAV05299@GMAIL.COM</H2>
-<div class="slideshow-container">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RIYASAT KRISHNA RESIDENCY</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+    }
 
-    <!-- Slide 1 -->
-    <div class="slide">
- <a href="#" target="_blank">
-            <img src="8.JPG" alt="Slide 1"></a>
-    </div>
+    body {
+      background: linear-gradient(to right, #e0f7fa, #e8f5e9);
+      padding: 40px 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
 
-    <!-- Slide 2 -->
-    <div class="slide">
-        <a href="#" target="_blank">
-            <img src="9.JPG"alt="Slide 2">
-        </a>
-    </div>
+    h1 {
+      color: #2e7d32;
+      font-size: 3rem;
+      margin-bottom: 10px;
+      text-align: center;
+      text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+    }
 
-    <!-- Slide 3 -->
-    <div class="slide">
-        <a href="https://www.example.com" target="_blank">
-            <img src="10.JPG" alt="Slide 3">
-        </a>
-    </div>
+    h2 {
+      color: #33691e;
+      font-size: 1.25rem;
+      margin-bottom: 20px;
+      text-align: center;
+    }
 
-<!-- Slide 4 -->
-    <div class="slide">
-        <a href="https://www.example.com" target="_blank">
-            <img src="11.JPG" alt="Slide 4">
-        </a>
-    </div>
+    h3, h4, h5, h6 {
+      margin-top: 24px;
+      text-align: center;
+      color: #1b5e20;
+    }
 
-<!-- Slide 5 -->
-    <div class="slide">
-        <a href="https://www.example.com" target="_blank">
-            <img src="12.JPG" alt="Slide 5">
-        </a>
-    </div>
-<!-- Slide 6 -->
-    <div class="slide">
-        <a href="https://www.example.com" target="_blank">
-            <img src="13.JPG" alt="Slide 6">
-        </a>
-    </div>
-</div>
-<!-- Navigation buttons -->
-<a class="prev" onclick="moveSlide(-1)">&#10094;</a>
-<a class="next" onclick="moveSlide(1)">&#10095;</a>
-<script src="slide.js"></script>
-<H3 ALIGN="CENTER">LOCATION = BHANKROTA NEAR BY DELHI PUBLIC SCHOOL BHANKROTA , RAJASTHAN INSTITUTE OF ENGINEERING AND TECHNOLOGY</H3>
-<H4 ALIGN="CENTER">PRICE = 35950/ YARD </H4>
-<H5 ALIGN="CENTER"> PLOT SIZE = STARTING FROM 111 YARD</H5>
-<H6> FACILITIES = * BOOM BARRIER , *LANDSCAPED PARK , *UNDERGROUND WATER PIPE LINE , *OUTER BOUNDARY ,*BOREWELL  *UNDERGROUND ELECTRIFICATION , ECO-FRIENDLY TOWNSHIP , UNDERGROUND SEWAGE LINE , GUARD HOUSE , PATHWAY , PLOT DEMARCATION </H6>
-</BODY>
-</HTML>
+    .slideshow-container {
+      width: 100%;
+      max-width: 1000px;
+      position: relative;
+      overflow: hidden;
+      border-radius: 20px;
+      box-shadow: 0 12px 32px rgba(0,0,0,0.15);
+      background-color: #fff;
+      margin-bottom: 30px;
+    }
 
+    .slide {
+      display: none;
+      animation: fade 1s ease-in-out;
+    }
+
+    .slide img {
+      width: 100%;
+      height: auto;
+      border-radius: 20px;
+    }
+
+    .active {
+      display: block;
+    }
+
+    @keyframes fade {
+      from {opacity: 0.4;}
+      to {opacity: 1;}
+    }
+
+    .prev, .next {
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      padding: 12px;
+      font-size: 28px;
+      color: white;
+      background-color: rgba(0, 0, 0, 0.5);
+      border-radius: 50%;
+      transform: translateY(-50%);
+      user-select: none;
+    }
+
+    .prev:hover, .next:hover {
+      background-color: rgba(0, 0, 0, 0.8);
+    }
+
+    .prev { left: 20px; }
+    .next { right: 20px; }
+
+    .counter {
+      margin-bottom: 24px;
+      font-weight: 600;
+      color: #2e7d32;
+      font-size: 1.1rem;
+    }
+
+    .info {
+      max-width: 1000px;
+      background: #ffffff;
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 6px 24px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+
+    .info ul {
+      list-style-type: none;
+      padding: 0;
+      margin-top: 12px;
+    }
+
+    .info ul li {
+      background: #f1f8e9;
+      padding: 12px;
+      margin: 8px 0;
+      border-radius: 10px;
+      font-size: 1rem;
+      transition: background-color 0.3s;
+    }
+
+    .info ul li:hover {
+      background-color: #dcedc8;
+    }
+
+    footer {
+      margin-top: 40px;
+      padding: 20px;
+      background-color: #1b5e20;
+      color: white;
+      width: 100%;
+      text-align: center;
+      font-size: 0.95rem;
+      border-top: 4px solid #66bb6a;
+    }
+
+    @media (max-width: 768px) {
+      h1 { font-size: 2rem; }
+      h2 { font-size: 1rem; }
+      .prev, .next { padding: 8px; font-size: 22px; }
+    }
+  </style>
+</head>
+<body>
+  <h1>RIYASAT KRISHNA RESIDENCY</h1>
+  <h2>📞 7767933864 | 📧 lokeshyadav05299@gmail.com</h2>
+  <h3>🏡 Well Developed JDA Township</h3>
+
+  <div class="slideshow-container">
+    <div class="slide active"><img src="8.JPG" alt="Slide 1"></div>
+    <div class="slide"><img src="9.JPG" alt="Slide 2"></div>
+    <div class="slide"><img src="10.JPG" alt="Slide 3"></div>
+    <div class="slide"><img src="11.JPG" alt="Slide 4"></div>
+    <div class="slide"><img src="12.JPG" alt="Slide 5"></div>
+    <div class="slide"><img src="13.JPG" alt="Slide 6"></div>
+    <div class="slide"><img src="14.JPG" alt="Slide 7"></div>
+    <div class="slide"><img src="15.JPG" alt="Slide 8"></div>
+    <a class="prev" onclick="moveSlide(-1)">&#10094;</a>
+    <a class="next" onclick="moveSlide(1)">&#10095;</a>
+  </div>
+  <div class="counter" id="counter">1 / 8</div>
+
+  <div class="info">
+    <h3>📍 Location</h3>
+    <p>Bhankrota near Delhi Public School, Rajasthan Institute of Engineering and Technology</p>
+
+    <h4>💰 Price</h4>
+    <p>₹35,950 / Yard</p>
+
+    <h5>📐 Plot Size</h5>
+    <p>Starting from 111 Yard</p>
+
+    <h6>🏢 Facilities</h6>
+    <ul>
+      <li>🚧 Boom Barrier</li>
+      <li>🌳 Landscaped Park</li>
+      <li>🚰 Underground Water Pipeline</li>
+      <li>🧱 Outer Boundary</li>
+      <li>💧 Borewell</li>
+      <li>⚡ Underground Electrification</li>
+      <li>🌿 Eco-Friendly Township</li>
+      <li>🕳 Underground Sewage Line</li>
+      <li>🏠 Guard House</li>
+      <li>🚶 Pathway</li>
+      <li>📏 Plot Demarcation</li>
+    </ul>
+  </div>
+
+  <footer>
+    &copy; 2025 Riyasat Krishna Residency. All rights reserved. | Designed by Lokesh Yadav
+  </footer>
+
+  <script>
+    let slideIndex = 0;
+    const slides = document.querySelectorAll(".slide");
+    const counter = document.getElementById("counter");
+
+    function showSlide(index) {
+      slides.forEach((slide, i) => {
+        slide.classList.remove("active");
+        if (i === index) slide.classList.add("active");
+      });
+      counter.textContent = `${index + 1} / ${slides.length}`;
+    }
+
+    function moveSlide(n) {
+      slideIndex += n;
+      if (slideIndex >= slides.length) slideIndex = 0;
+      if (slideIndex < 0) slideIndex = slides.length - 1;
+      showSlide(slideIndex);
+    }
+
+    setInterval(() => moveSlide(1), 5000);
+  </script>
+</body>
+</html>
