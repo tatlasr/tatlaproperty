@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>BHUMIJA EMPIRE</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
   <style>
@@ -29,14 +29,14 @@
     }
 
     header h1 {
-      font-size: 36px;
+      font-size: 42px;
       margin-bottom: 12px;
     }
 
     header h2 {
-      font-size: 16px;
+      font-size: 18px;
       font-weight: 400;
-      opacity: 0.9;
+      opacity: 0.95;
     }
 
     .slideshow-container {
@@ -44,8 +44,8 @@
       max-width: 90%;
       margin: 40px auto 20px;
       overflow: hidden;
-      border-radius: 15px;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.3);
     }
 
     .slide {
@@ -57,11 +57,11 @@
       width: 100%;
       height: auto;
       display: block;
-      border-radius: 15px;
+      border-radius: 20px;
     }
 
     @keyframes fade {
-      from { opacity: 0.4; }
+      from { opacity: 0.3; }
       to { opacity: 1; }
     }
 
@@ -85,7 +85,7 @@
 
     .prev:hover, .next:hover {
       background-color: #000;
-      transform: scale(1.05);
+      transform: scale(1.1);
     }
 
     .prev { left: 20px; }
@@ -94,34 +94,37 @@
     .info-section {
       background: white;
       margin: 40px auto;
-      padding: 30px;
-      border-radius: 15px;
-      max-width: 950px;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+      padding: 40px 30px;
+      border-radius: 20px;
+      max-width: 1000px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
       text-align: center;
+      transition: all 0.5s ease;
     }
 
     .info-section h3,
     .info-section h4,
     .info-section h5 {
-      margin: 14px 0;
+      margin: 16px 0;
       font-weight: 500;
+      font-size: 20px;
     }
 
     .facilities {
-      padding: 30px;
+      padding: 40px;
       background-color: #ffffff;
-      margin: 0 auto 50px auto;
-      max-width: 950px;
-      border-radius: 15px;
-      box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+      margin: 0 auto 60px auto;
+      max-width: 1000px;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
     }
 
     .facilities h5 {
-      margin-bottom: 18px;
-      font-size: 22px;
+      margin-bottom: 24px;
+      font-size: 26px;
       color: #1b5e20;
       font-weight: 600;
+      text-align: center;
     }
 
     .facilities ul {
@@ -130,13 +133,13 @@
       text-align: left;
       columns: 2;
       column-gap: 40px;
+      font-size: 18px;
     }
 
     .facilities ul li {
-      margin-bottom: 12px;
-      padding-left: 25px;
+      margin-bottom: 16px;
+      padding-left: 30px;
       position: relative;
-      font-size: 17px;
     }
 
     .facilities ul li::before {
@@ -147,15 +150,40 @@
       color: #2e7d32;
     }
 
+    footer {
+      background: #1b5e20;
+      color: #fff;
+      padding: 20px 10px;
+      text-align: center;
+      font-size: 15px;
+    }
+
+    a.whatsapp {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #25d366;
+      color: white;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 30px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      z-index: 100;
+      text-decoration: none;
+    }
+
     @media (max-width: 768px) {
-      header h1 { font-size: 26px; }
-      header h2 { font-size: 14px; }
+      header h1 { font-size: 28px; }
+      header h2 { font-size: 15px; }
       .facilities ul { columns: 1; }
     }
   </style>
 </head>
 <body>
-
   <header>
     <h1>BHUMIJA EMPIRE</h1>
     <h2>📞 7767933864 | ✉️ lokeshyadav05299@gmail.com</h2>
@@ -202,9 +230,18 @@
     </ul>
   </div>
 
+  <footer>
+    &copy; 2025 BHUMIJA EMPIRE. All Rights Reserved.
+  </footer>
+
+  <a href="https://wa.me/917767933864" target="_blank" class="whatsapp" title="Chat on WhatsApp">
+    💬
+  </a>
+
   <script>
     let slideIndex = 0;
     const slides = document.getElementsByClassName("slide");
+    let slideTimer;
 
     function showSlides() {
       for (let i = 0; i < slides.length; i++) {
@@ -213,10 +250,11 @@
       slideIndex++;
       if (slideIndex > slides.length) slideIndex = 1;
       slides[slideIndex - 1].style.display = "block";
-      setTimeout(showSlides, 3000);
+      slideTimer = setTimeout(showSlides, 3000);
     }
 
     function moveSlide(n) {
+      clearTimeout(slideTimer);
       slideIndex += n;
       if (slideIndex > slides.length) slideIndex = 1;
       if (slideIndex < 1) slideIndex = slides.length;
@@ -224,10 +262,10 @@
         slides[i].style.display = "none";
       }
       slides[slideIndex - 1].style.display = "block";
+      slideTimer = setTimeout(showSlides, 3000);
     }
 
     showSlides();
   </script>
-
 </body>
 </html>
