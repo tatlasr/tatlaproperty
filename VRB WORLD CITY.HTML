@@ -1,109 +1,214 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<title>VRB WORLD CITY </title>
-<link rel="stylesheet" href="slide.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VRB WORLD CITY</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+    }
 
+    body {
+      background: linear-gradient(to right, #e3f2fd, #e8f5e9);
+      padding: 40px 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
 
+    h1 {
+      color: #1565c0;
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+      text-align: center;
+      text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      color: #2e7d32;
+      font-size: 1.2rem;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    h3, h4, h5 {
+      margin-top: 24px;
+      text-align: center;
+      color: #424242;
+    }
+
+    .slideshow-container {
+      width: 100%;
+      max-width: 1000px;
+      position: relative;
+      overflow: hidden;
+      border-radius: 15px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+      background-color: #fff;
+      margin-bottom: 30px;
+    }
+
+    .slide {
+      display: none;
+      animation: fade 1s ease-in-out;
+    }
+
+    .slide img {
+      width: 100%;
+      height: auto;
+      border-radius: 15px;
+    }
+
+    .active {
+      display: block;
+    }
+
+    @keyframes fade {
+      from {opacity: 0.5;}
+      to {opacity: 1;}
+    }
+
+    .prev, .next {
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      padding: 10px;
+      font-size: 24px;
+      color: white;
+      background-color: rgba(0, 0, 0, 0.5);
+      border-radius: 50%;
+      transform: translateY(-50%);
+      user-select: none;
+    }
+
+    .prev:hover, .next:hover {
+      background-color: rgba(0, 0, 0, 0.8);
+    }
+
+    .prev { left: 20px; }
+    .next { right: 20px; }
+
+    .info {
+      max-width: 1000px;
+      background: #ffffff;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 4px 18px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+
+    .info ul {
+      list-style-type: none;
+      padding: 0;
+      margin-top: 15px;
+    }
+
+    .info ul li {
+      background: #e3f2fd;
+      padding: 10px;
+      margin: 6px 0;
+      border-radius: 10px;
+      transition: background-color 0.3s;
+    }
+
+    .info ul li:hover {
+      background-color: #bbdefb;
+    }
+
+    footer {
+      margin-top: 40px;
+      padding: 20px;
+      background-color: #1565c0;
+      color: white;
+      width: 100%;
+      text-align: center;
+      font-size: 0.9rem;
+      border-top: 4px solid #64b5f6;
+    }
+
+    @media (max-width: 768px) {
+      h1 { font-size: 2rem; }
+      h2 { font-size: 1rem; }
+      .prev, .next { padding: 8px; font-size: 20px; }
+    }
+  </style>
 </head>
 <body>
-<h1 align="center">VRB WORLD CITY &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; CONTACT US: 7767933864 </H1></H1>
-<H2 ALIGN="CENTER">WELL DEVELOPED JDA TOWNSHIP&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;LOKESHYADAV05299@GMAIL.COM</H2>
-<div class="slideshow-container">
+  <h1>VRB WORLD CITY</h1>
+  <h2>📞 7767933864 | 📧 lokeshyadav05299@gmail.com</h2>
 
-    <!-- Slide 1 -->
-    <div class="slide">
- <a href="#" target="_blank">
-            <img src="76.jpg" alt="Slide 1"></a>
-    </div>
+  <div class="slideshow-container">
+    <div class="slide active"><img src="76.jpg" alt="Slide 1"></div>
+    <div class="slide"><img src="88.jpg" alt="Slide 2"></div>
+    <div class="slide"><img src="78.jpg" alt="Slide 3"></div>
+    <div class="slide"><img src="79.jpg" alt="Slide 4"></div>
+    <div class="slide"><img src="80.jpg" alt="Slide 5"></div>
+    <div class="slide"><img src="81.jpg" alt="Slide 6"></div>
+    <div class="slide"><img src="82.jpg" alt="Slide 7"></div>
+    <div class="slide"><img src="83.jpg" alt="Slide 8"></div>
+    <div class="slide"><img src="84.jpg" alt="Slide 9"></div>
+    <div class="slide"><img src="85.jpg" alt="Slide 10"></div>
+    <div class="slide"><img src="86.jpg" alt="Slide 11"></div>
+    <div class="slide"><img src="87.jpg" alt="Slide 12"></div>
+    <div class="slide"><img src="77.jpg" alt="Slide 13"></div>
+    <a class="prev" onclick="moveSlide(-1)">&#10094;</a>
+    <a class="next" onclick="moveSlide(1)">&#10095;</a>
+  </div>
 
-    <!-- Slide 2 -->
-    <div class="slide">
-        <a href="#" target="_blank">
-            <img src="88.jpg"alt="Slide 2">
-        </a>
-    </div>
+  <div class="info">
+    <h3>📍 Location</h3>
+    <p>Village Bhapura, Near Mahindra SEZ</p>
 
-    <!-- Slide 3 -->
-    <div class="slide">
-        <a href="https://www.example.com" target="_blank">
-            <img src="78.jpg" alt="Slide 3">
-        </a>
-    </div>
+    <h4>💰 Price</h4>
+    <p>₹16,950 / Yard</p>
 
-<!-- Slide 4 -->
-    <div class="slide">
-        <a href="https://www.example.com" target="_blank">
-            <img src="79.jpg" alt="Slide 4">
-        </a>
-    </div>
+    <h5>📐 Plot Size</h5>
+    <p>Starting from 111 Yard</p>
 
-<!-- Slide 5 -->
-    <div class="slide">
-        <a href="https://www.example.com" target="_blank">
-            <img src="80.jpg" alt="Slide 5">
-        </a>
-    </div>
-<!-- Slide 6 -->
-    <div class="slide">
-        <a href="https://www.example.com" target="_blank">
-            <img src="81.jpg" alt="Slide 6">
-        </a>
-    </div>
-<!-- Slide 7 -->
-    <div class="slide">
-        <a href="https://www.example.com" target="_blank">
-            <img src="82.jpg" alt="Slide 7">
-        </a>
-    </div>
-<!-- Slide 8 -->
-    <div class="slide">
-        <a href="https://www.example.com" target="_blank">
-            <img src="83.jpg" alt="Slide 8">
-        </a>
-    </div>
-<!-- Slide 9 -->
-    <div class="slide">
-        <a href="https://www.example.com" target="_blank">
-            <img src="84.jpg" alt="Slide 9">
-        </a>
-    </div>
+    <h5>🏢 Facilities</h5>
+    <ul>
+      <li>🚧 Boom Barrier</li>
+      <li>🌳 Landscaped Park</li>
+      <li>🚰 Underground Water Pipeline</li>
+      <li>🧱 Outer Boundary</li>
+      <li>💧 Borewell</li>
+      <li>⚡ Underground Electrification</li>
+      <li>🌿 Eco-Friendly Township</li>
+      <li>🕳 Underground Sewage Line</li>
+      <li>🏠 Guard House</li>
+      <li>🚶 Pathway</li>
+      <li>📏 Plot Demarcation</li>
+    </ul>
+  </div>
 
-<!-- Slide 10 -->
-    <div class="slide">
-        <a href="https://www.example.com" target="_blank">
-            <img src="85.jpg" alt="Slide 10">
-        </a>
-    </div>
+  <footer>
+    &copy; 2025 VRB World City. All rights reserved. | Designed by Lokesh Yadav
+  </footer>
 
-<!-- Slide 11 -->
-    <div class="slide">
-        <a href="https://www.example.com" target="_blank">
-            <img src="86.jpg" alt="Slide 11">
-        </a>
-    </div>
+  <script>
+    let slideIndex = 0;
+    const slides = document.querySelectorAll(".slide");
 
-<!-- Slide 12-->
-    <div class="slide">
-        <a href="https://www.example.com" target="_blank">
-            <img src="87.jpg" alt="Slide 12">
-        </a>
-    </div>
-<!-- Slide 13-->
-    <div class="slide">
-        <a href="https://www.example.com" target="_blank">
-            <img src="77.jpg" alt="Slide 13">
-        </a>
-    </div>
-</div>
-<!-- Navigation buttons -->
-<a class="prev" onclick="moveSlide(-1)">&#10094;</a>
-<a class="next" onclick="moveSlide(1)">&#10095;</a>
-<script src="slide.js"></script>
-<H3 ALIGN="CENTER">LOCATION = VILLAGE BHAPURA NEAR BY MAHINDRA SEZ   </H3>
-<H4 ALIGN="CENTER">PRICE = 16950 / YARD </H4>
-<H5 ALIGN="CENTER"> PLOT SIZE = STARTING FROM 111 YARD</H5>
-<H5> FACILITIES = * BOOM BARRIER , *LANDSCAPED PARK , *UNDERGROUND WATER PIPE LINE , *OUTER BOUNDARY ,*BOREWELL  *UNDERGROUND ELECTRIFICATION , ECO-FRIENDLY TOWNSHIP , UNDERGROUND SEWAGE LINE , GUARD HOUSE , PATHWAY , PLOT DEMARCATION </H5>
-<script src="slide.js"></script>
+    function showSlide(index) {
+      slides.forEach((slide, i) => {
+        slide.classList.remove("active");
+        if (i === index) slide.classList.add("active");
+      });
+    }
+
+    function moveSlide(n) {
+      slideIndex += n;
+      if (slideIndex >= slides.length) slideIndex = 0;
+      if (slideIndex < 0) slideIndex = slides.length - 1;
+      showSlide(slideIndex);
+    }
+
+    setInterval(() => moveSlide(1), 5000);
+  </script>
 </body>
 </html>
-
