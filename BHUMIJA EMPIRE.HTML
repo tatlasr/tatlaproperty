@@ -14,38 +14,40 @@
 
     body {
       font-family: 'Poppins', sans-serif;
-      background-color: #f4f4f4;
+      background-color: #fefefe;
       color: #222;
-      line-height: 1.6;
       scroll-behavior: smooth;
     }
 
     header {
-      background: linear-gradient(135deg, #1b5e20, #43a047);
+      background: linear-gradient(135deg, #004d40, #26a69a);
       color: white;
       padding: 40px 15px;
       text-align: center;
       box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      position: sticky;
+      top: 0;
+      z-index: 999;
     }
 
     header h1 {
       font-size: 42px;
-      margin-bottom: 12px;
+      margin-bottom: 10px;
     }
 
     header h2 {
-      font-size: 18px;
+      font-size: 16px;
       font-weight: 400;
       opacity: 0.95;
     }
 
     .slideshow-container {
       position: relative;
-      max-width: 90%;
+      max-width: 92%;
       margin: 40px auto 20px;
       overflow: hidden;
       border-radius: 20px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
     }
 
     .slide {
@@ -69,14 +71,14 @@
       cursor: pointer;
       position: absolute;
       top: 50%;
-      width: 50px;
-      height: 50px;
-      margin-top: -25px;
+      width: 48px;
+      height: 48px;
+      margin-top: -24px;
       color: #fff;
-      font-size: 28px;
-      background-color: rgba(0, 0, 0, 0.6);
+      font-size: 26px;
+      background-color: rgba(0, 0, 0, 0.5);
       border-radius: 50%;
-      line-height: 50px;
+      line-height: 48px;
       text-align: center;
       user-select: none;
       z-index: 10;
@@ -85,44 +87,43 @@
 
     .prev:hover, .next:hover {
       background-color: #000;
-      transform: scale(1.1);
+      transform: scale(1.08);
     }
 
-    .prev { left: 20px; }
-    .next { right: 20px; }
+    .prev { left: 16px; }
+    .next { right: 16px; }
 
     .info-section {
       background: white;
       margin: 40px auto;
       padding: 40px 30px;
-      border-radius: 20px;
+      border-radius: 18px;
       max-width: 1000px;
       box-shadow: 0 10px 25px rgba(0,0,0,0.1);
       text-align: center;
-      transition: all 0.5s ease;
     }
 
     .info-section h3,
     .info-section h4,
     .info-section h5 {
-      margin: 16px 0;
+      margin: 14px 0;
       font-weight: 500;
       font-size: 20px;
     }
 
     .facilities {
       padding: 40px;
-      background-color: #ffffff;
+      background-color: #e8f5e9;
       margin: 0 auto 60px auto;
       max-width: 1000px;
       border-radius: 20px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.05);
     }
 
     .facilities h5 {
       margin-bottom: 24px;
       font-size: 26px;
-      color: #1b5e20;
+      color: #004d40;
       font-weight: 600;
       text-align: center;
     }
@@ -147,11 +148,11 @@
       position: absolute;
       left: 0;
       top: 0;
-      color: #2e7d32;
+      color: #00796b;
     }
 
     footer {
-      background: #1b5e20;
+      background: #004d40;
       color: #fff;
       padding: 20px 10px;
       text-align: center;
@@ -177,8 +178,8 @@
     }
 
     @media (max-width: 768px) {
-      header h1 { font-size: 28px; }
-      header h2 { font-size: 15px; }
+      header h1 { font-size: 26px; }
+      header h2 { font-size: 14px; }
       .facilities ul { columns: 1; }
     }
   </style>
