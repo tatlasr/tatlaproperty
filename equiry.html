@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(to bottom right, #fdfbfb, #ebedee);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 20px;
+    }
+
+    section#Contact {
+      background-color: #ffffff;
+      padding: 60px 50px;
+      border-radius: 24px;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+      width: 100%;
+      max-width: 760px;
+      transition: all 0.3s ease-in-out;
+    }
+
+    h1.h-primary {
+      text-align: center;
+      font-size: 2.8rem;
+      color: #2d3436;
+      margin-bottom: 40px;
+      text-transform: uppercase;
+    }
+
+    .form-group {
+      margin-bottom: 26px;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 10px;
+      font-weight: 600;
+      color: #34495e;
+    }
+
+    .form-group input,
+    .form-group textarea {
+      width: 100%;
+      padding: 14px 18px;
+      border: 1px solid #dcdde1;
+      border-radius: 14px;
+      font-size: 1rem;
+      background: #f8f9fa;
+      transition: border-color 0.3s ease, background-color 0.3s ease;
+    }
+
+    .form-group input:focus,
+    .form-group textarea:focus {
+      border-color: #00b894;
+      outline: none;
+      background-color: #ffffff;
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 120px;
+    }
+
+    button {
+      width: 100%;
+      padding: 16px;
+      background-color: #00b894;
+      color: #fff;
+      font-size: 1.2rem;
+      font-weight: 600;
+      border: none;
+      border-radius: 14px;
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+    button:hover {
+      background-color: #019875;
+      transform: translateY(-2px);
+    }
+
+    .whatsapp-float {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #25D366;
+      color: white;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 28px;
+      z-index: 100;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+      text-decoration: none;
+    }
+
+    .whatsapp-float:hover {
+      background-color: #20bf6b;
+    }
+
+    @media (max-width: 600px) {
+      section#Contact {
+        padding: 30px 20px;
+      }
+
+      h1.h-primary {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <section id="Contact">
+    <h1 class="h-primary">Contact Us</h1>
+    <div id="contact-box">
+      <form onsubmit="return sendToWhatsApp()">
+        <div class="form-group">
+          <label for="name">Name:</label>
+          <input type="text" name="name" id="name" placeholder="Enter your name" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input type="email" name="email" id="email" placeholder="Enter your email" required>
+        </div>
+        <div class="form-group">
+          <label for="number">Phone No:</label>
+          <input type="tel" name="number" id="number" placeholder="Enter your phone number" required>
+        </div>
+        <div class="form-group">
+          <label for="property">Interested Property Area:</label>
+          <input type="text" name="property" id="property" placeholder="Enter property area of interest" required>
+        </div>
+        <div class="form-group">
+          <label for="query">Your Query:</label>
+          <textarea name="query" id="query" placeholder="Type your message here" required></textarea>
+        </div>
+        <button type="submit">Submit via WhatsApp</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- WhatsApp Floating Button -->
+  <a href="https://wa.me/917767933864" class="whatsapp-float" target="_blank" title="Chat on WhatsApp">💬</a>
+
+  <script>
+    function sendToWhatsApp() {
+      var name = document.getElementById("name").value;
+      var email = document.getElementById("email").value;
+      var number = document.getElementById("number").value;
+      var property = document.getElementById("property").value;
+      var query = document.getElementById("query").value;
+
+      var message = `Name: ${name}%0AEmail: ${email}%0APhone: ${number}%0AInterested Property: ${property}%0AQuery: ${query}`;
+      var phoneNumber = "917767933864";
+
+      var whatsappURL = `https://wa.me/${phoneNumber}?text=${message}`;
+      window.open(whatsappURL, "_blank");
+
+      return false;
+    }
+  </script>
+</body>
+
+</html>
