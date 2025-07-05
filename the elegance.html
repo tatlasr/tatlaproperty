@@ -1,62 +1,262 @@
-<HTML>
-<HEAD>
-<TITLE>THE ELEGANCE</TITLE>
-  <link rel="stylesheet" href="slide.css">
-</HEAD>
-<BODY>
-<BODY BGCOLOR="skyblue">
-</BR></BR>
-  <H1 ALIGN="CENTER"> THE ELEGANCE TOWNSHIP&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; CONTACT US: 7767933864 </H1>
-<H2 ALIGN="CENTER">WELL DEVELOPED JDA TOWNSHIP&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;LOKESHYADAV05299@GMAIL.COM</H2>
-<div class="slideshow-container">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>THE ELEGANCE</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+    }
 
-    <!-- Slide 1 -->
-    <div class="slide">
- <a href="#" target="_blank">
-            <img src="26.jpg" alt="Slide 1"></a>
-    </div>
+    body {
+      background: linear-gradient(to right, #e1f5fe, #fff3e0);
+      padding: 40px 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
 
-    <!-- Slide 2 -->
-    <div class="slide">
-        <a href="#" target="_blank">
-            <img src="27.jpg"alt="Slide 2">
-        </a>
-    </div>
+    h1 {
+      color: #0d47a1;
+      font-size: 2.8rem;
+      margin-bottom: 10px;
+      text-align: center;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+    }
 
-    <!-- Slide 3 -->
-    <div class="slide">
-        <a href="https://www.example.com" target="_blank">
-            <img src="28.jpg" alt="Slide 3">
-        </a>
-    </div>
+    h2 {
+      color: #1565c0;
+      font-size: 1.3rem;
+      margin-bottom: 20px;
+      text-align: center;
+    }
 
-<!-- Slide 4 -->
-    <div class="slide">
-        <a href="https://www.example.com" target="_blank">
-            <img src="29.jpg" alt="Slide 4">
-        </a>
-    </div>
+    h3, h4, h5 {
+      margin-top: 24px;
+      text-align: center;
+      color: #263238;
+    }
 
-<!-- Slide 5 -->
-    <div class="slide">
-        <a href="https://www.example.com" target="_blank">
-            <img src="30.jpg" alt="Slide 5">
-        </a>
-    </div>
-<!-- Slide 6 -->
-    <div class="slide">
-        <a href="https://www.example.com" target="_blank">
-            <img src="31.jpg" alt="Slide 6">
-        </a>
-    </div>
-</div>
-<!-- Navigation buttons -->
-<a class="prev" onclick="moveSlide(-1)">&#10094;</a>
-<a class="next" onclick="moveSlide(1)">&#10095;</a>
-<H3 ALIGN="CENTER">LOCATION = NEAR BY SITAPURA , EXTENSION RING ROAD</H3>
-<H4 ALIGN="CENTER">PRICE = CONTACT ME </H4>
-<H5 ALIGN="CENTER"> PLOT SIZE = STARTING FROM 111 YARD</H5>
-<H6> FACILITIES = * BOOM BARRIER , *LANDSCAPED PARK , *UNDERGROUND WATER PIPE LINE , *OUTER BOUNDARY ,*BOREWELL  *UNDERGROUND ELECTRIFICATION , ECO-FRIENDLY TOWNSHIP , UNDERGROUND SEWAGE LINE , GUARD HOUSE , PATHWAY , PLOT DEMARCATION </H6>
-<script src="slide.js"></script>
-</BODY>
-</HTML>
+    .slideshow-container {
+      width: 100%;
+      max-width: 1000px;
+      position: relative;
+      overflow: hidden;
+      border-radius: 20px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+      background-color: #fff;
+      margin-bottom: 30px;
+    }
+
+    .slide {
+      display: none;
+      animation: fade 1s ease-in-out;
+    }
+
+    .slide img {
+      width: 100%;
+      height: auto;
+      border-radius: 20px;
+    }
+
+    .active {
+      display: block;
+    }
+
+    @keyframes fade {
+      from {opacity: 0.5;}
+      to {opacity: 1;}
+    }
+
+    .prev, .next {
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      padding: 12px;
+      font-size: 28px;
+      color: white;
+      background-color: rgba(0, 0, 0, 0.5);
+      border-radius: 50%;
+      transform: translateY(-50%);
+      user-select: none;
+      transition: background 0.3s;
+    }
+
+    .prev:hover, .next:hover {
+      background-color: rgba(0, 0, 0, 0.8);
+    }
+
+    .prev { left: 20px; }
+    .next { right: 20px; }
+
+    .info {
+      max-width: 1000px;
+      background: #ffffff;
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+
+    .info ul {
+      list-style-type: none;
+      padding: 0;
+      margin-top: 15px;
+    }
+
+    .info ul li {
+      background: #e3f2fd;
+      padding: 12px;
+      margin: 8px 0;
+      border-radius: 12px;
+      transition: background-color 0.3s;
+    }
+
+    .info ul li:hover {
+      background-color: #bbdefb;
+    }
+
+    .highlight {
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: #0d47a1;
+    }
+
+    footer {
+      margin-top: 50px;
+      padding: 25px;
+      background-color: #0d47a1;
+      color: white;
+      width: 100%;
+      text-align: center;
+      font-size: 1rem;
+      border-top: 5px solid #64b5f6;
+      position: relative;
+    }
+
+    footer span {
+      display: block;
+      margin-top: 8px;
+      font-size: 0.95rem;
+    }
+
+    .whatsapp-float {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #25D366;
+      color: white;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 30px;
+      z-index: 100;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+      text-decoration: none;
+    }
+
+    @media (max-width: 768px) {
+      body {
+        padding: 20px 10px;
+      }
+      h1 { font-size: 2rem; }
+      h2 { font-size: 1rem; }
+      h3, h4, h5 { font-size: 1rem; }
+      .prev, .next {
+        padding: 10px;
+        font-size: 22px;
+      }
+      .info {
+        padding: 20px;
+      }
+      .highlight {
+        font-size: 1rem;
+      }
+      footer {
+        font-size: 0.9rem;
+        padding: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>THE ELEGANCE TOWNSHIP</h1>
+  <h2>📞 7767933864 | 📧 lokeshyadav05299@gmail.com</h2>
+
+  <div class="slideshow-container">
+    <div class="slide active"><img src="26.jpg" alt="Slide 1"></div>
+    <div class="slide"><img src="27.jpg" alt="Slide 2"></div>
+    <div class="slide"><img src="28.jpg" alt="Slide 3"></div>
+    <div class="slide"><img src="29.jpg" alt="Slide 4"></div>
+    <div class="slide"><img src="30.jpg" alt="Slide 5"></div>
+    <div class="slide"><img src="31.jpg" alt="Slide 6"></div>
+    <a class="prev" onclick="moveSlide(-1)">&#10094;</a>
+    <a class="next" onclick="moveSlide(1)">&#10095;</a>
+  </div>
+
+  <div class="info">
+    <h3>📍 Location</h3>
+    <p class="highlight">Near Sitapura, Extension Ring Road</p>
+
+    <h4>💰 Price</h4>
+    <p class="highlight">Contact for Price</p>
+
+    <h5>📐 Plot Size</h5>
+    <p class="highlight">Starting from 111 Yard</p>
+
+    <h5>🏢 Facilities</h5>
+    <ul>
+      <li>🚧 Boom Barrier</li>
+      <li>🌳 Landscaped Park</li>
+      <li>🚰 Underground Water Pipeline</li>
+      <li>🧱 Outer Boundary</li>
+      <li>💧 Borewell</li>
+      <li>⚡ Underground Electrification</li>
+      <li>🌿 Eco-Friendly Township</li>
+      <li>🕳 Underground Sewage Line</li>
+      <li>🏠 Guard House</li>
+      <li>🚶 Pathway</li>
+      <li>📏 Plot Demarcation</li>
+    </ul>
+  </div>
+
+  <footer>
+    &copy; 2025 The Elegance Township. All rights reserved. | Designed by Lokesh Yadav
+    <span>Follow us on Instagram • Facebook • WhatsApp</span>
+  </footer>
+
+  <!-- WhatsApp Button -->
+  <a href="https://wa.me/917767933864" class="whatsapp-float" target="_blank" title="Chat on WhatsApp">
+    🟢
+  </a>
+
+  <script>
+    let slideIndex = 0;
+    const slides = document.querySelectorAll(".slide");
+
+    function showSlide(index) {
+      slides.forEach((slide, i) => {
+        slide.classList.remove("active");
+        if (i === index) slide.classList.add("active");
+      });
+    }
+
+    function moveSlide(n) {
+      slideIndex += n;
+      if (slideIndex >= slides.length) slideIndex = 0;
+      if (slideIndex < 0) slideIndex = slides.length - 1;
+      showSlide(slideIndex);
+    }
+
+    setInterval(() => moveSlide(1), 5000);
+  </script>
+</body>
+</html>
