@@ -6,144 +6,148 @@
   <title>RIYASAT KRISHNA RESIDENCY</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-      font-family: 'Poppins', sans-serif;
-    }
+   :root {
+            --primary-color: #2c3e50;
+            --accent-color: #27ae60;
+            --text-light: #f4f4f4;
+            --bg-light: #ffffff;
+            --bg-dark: #ecf0f1;
+            --hover-color: #1abc9c;
+        }
 
-    body {
-      background: linear-gradient(to right, #e0f7fa, #e8f5e9);
-      padding: 40px 20px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        }
 
-    h1 {
-      color: #2e7d32;
-      font-size: 3rem;
-      margin-bottom: 10px;
-      text-align: center;
-      text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
-    }
+        body {
+            background-color: var(--bg-dark);
+            color: #333;
+            line-height: 1.6;
+        }
 
-    h2 {
-      color: #33691e;
-      font-size: 1.25rem;
-      margin-bottom: 20px;
-      text-align: center;
-    }
+        header {
+            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+            color: var(--text-light);
+            padding: 30px 10%;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
 
-    h3, h4, h5, h6 {
-      margin-top: 24px;
-      text-align: center;
-      color: #1b5e20;
-    }
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
 
-    .slideshow-container {
-      width: 100%;
-      max-width: 1000px;
-      position: relative;
-      overflow: hidden;
-      border-radius: 20px;
-      box-shadow: 0 12px 32px rgba(0,0,0,0.15);
-      background-color: #fff;
-      margin-bottom: 30px;
-    }
+        header p {
+            font-size: 1.1rem;
+        }
 
-    .slide {
-      display: none;
-      animation: fade 1s ease-in-out;
-    }
+        a {
+            color: var(--accent-color);
+            text-decoration: none;
+        }
 
-    .slide img {
-      width: 100%;
-      height: auto;
-      border-radius: 20px;
-    }
+        a:hover {
+            color: var(--hover-color);
+        }
 
-    .active {
-      display: block;
-    }
+        .slideshow-container {
+            position: relative;
+            max-width: 1000px;
+            margin: 40px auto;
+            overflow: hidden;
+            border-radius: 12px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
 
-    @keyframes fade {
-      from {opacity: 0.4;}
-      to {opacity: 1;}
-    }
+        .slide {
+            display: none;
+            text-align: center;
+            background-color: var(--bg-light);
+        }
 
-    .prev, .next {
-      cursor: pointer;
-      position: absolute;
-      top: 50%;
-      padding: 12px;
-      font-size: 28px;
-      color: white;
-      background-color: rgba(0, 0, 0, 0.5);
-      border-radius: 50%;
-      transform: translateY(-50%);
-      user-select: none;
-    }
+        .slide img {
+            width: 100%;
+            height: auto;
+            border-radius: 12px;
+        }
 
-    .prev:hover, .next:hover {
-      background-color: rgba(0, 0, 0, 0.8);
-    }
+        .nav-button {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            color: #fff;
+            font-size: 24px;
+            padding: 10px;
+            cursor: pointer;
+            border: none;
+            border-radius: 50%;
+            transition: background 0.3s ease;
+        }
 
-    .prev { left: 20px; }
-    .next { right: 20px; }
+        .prev { left: 20px; }
+        .next { right: 20px; }
 
-    .counter {
-      margin-bottom: 24px;
-      font-weight: 600;
-      color: #2e7d32;
-      font-size: 1.1rem;
-    }
+        .nav-button:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
 
-    .info {
-      max-width: 1000px;
-      background: #ffffff;
-      padding: 40px;
-      border-radius: 20px;
-      box-shadow: 0 6px 24px rgba(0,0,0,0.1);
-      text-align: center;
-    }
+        section.details {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 30px;
+            background-color: var(--bg-light);
+            border-radius: 12px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+        }
 
-    .info ul {
-      list-style-type: none;
-      padding: 0;
-      margin-top: 12px;
-    }
+        section.details h2 {
+            color: var(--primary-color);
+            margin-bottom: 15px;
+            border-bottom: 2px solid var(--accent-color);
+            padding-bottom: 5px;
+        }
 
-    .info ul li {
-      background: #f1f8e9;
-      padding: 12px;
-      margin: 8px 0;
-      border-radius: 10px;
-      font-size: 1rem;
-      transition: background-color 0.3s;
-    }
+        section.details ul {
+            margin-left: 20px;
+            list-style-type: square;
+            color: #555;
+        }
 
-    .info ul li:hover {
-      background-color: #dcedc8;
-    }
+        section.details li {
+            padding: 5px 0;
+        }
 
-    footer {
-      margin-top: 40px;
-      padding: 20px;
-      background-color: #1b5e20;
-      color: white;
-      width: 100%;
-      text-align: center;
-      font-size: 0.95rem;
-      border-top: 4px solid #66bb6a;
-    }
+        footer {
+            background-color: var(--primary-color);
+            color: var(--text-light);
+            padding: 15px;
+            text-align: center;
+            font-size: 0.95rem;
+        }
 
-    @media (max-width: 768px) {
-      h1 { font-size: 2rem; }
-      h2 { font-size: 1rem; }
-      .prev, .next { padding: 8px; font-size: 22px; }
-    }
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+
+            header p {
+                font-size: 0.95rem;
+            }
+
+            .nav-button {
+                font-size: 18px;
+                padding: 8px;
+            }
+
+            section.details {
+                padding: 20px;
+            }
+        }
   </style>
 </head>
 <body>
